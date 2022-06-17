@@ -1,0 +1,7 @@
+flake8
+genbadge
+sphinx
+pytest
+pytest-html
+coverage
+pytest-cov
