@@ -4,6 +4,10 @@
 
 * [About project](#about-project)
 * [Architecture](#architecture)
+* [Use](#use)
+* [Quick start](#quick-start)
+* [How to create your own application](#how-to-create-your-own-application)
+* [Further Information](#further-information)
 
 ## About project
 Recent network traffic classification methods benefit from machine learning (ML) technology. However, there are many challenges due to use of ML, such as: lack of high-quality annotated datasets, data-drifts and other effects causing aging of datasets and ML models, high volumes of network traffic etc. We presents a novel Active Learning Framework (ALF) to address this topic. ALF provides prepared software components that can be used to deploy an active learning loop and maintain an ALF instance that continuously evolves a dataset and ML model automatically. The resulting solution is deployable for **IP flow-based** analysis of high-speed (100\,Gb/s) networks, and also **supports research experiments** on different strategies and methods for annotation, evaluation, dataset optimization, etc.
@@ -168,10 +172,6 @@ Last part - run the machine:
 ```python
 engine.run()
 ```
-
-## License
-
-BSD
 
 ## Further Information
 
