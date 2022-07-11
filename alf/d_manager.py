@@ -89,7 +89,6 @@ class DManagerFile(DManager):
         Args:
             d_0_path (str): Path to file with D_0 database (starting set)
         """
-        self._d_0_path = d_0_path
         ctx = context_manager.ContextProvider.get_context()
         wd = ctx.get_working_dir()
         exp_id = ctx.get_experiment_id()
@@ -99,7 +98,7 @@ class DManagerFile(DManager):
             pd.read_csv(self._db_path)
             return
         except FileNotFoundError:
-            db = pd.read_csv(self._d_0_path)
+            db = pd.read_csv(d_0_path)
             db.to_csv(self._db_path, index=False)
         return
 
@@ -180,6 +179,29 @@ class DManagerFile(DManager):
         self._db = flows
         return
 
+class DManagerDataFrame(DManagerFile):
+    def __init__(self, d_0_path: pd.DataFrame, **options) -> None:
+        """Initialize DManagerFile. During initialization, it loads database
+        from passed DataFrame object and copy it to working directory. If database in working
+        directory exists, nothing is done.
+
+        Args:
+            d_0_path (DataFrame): DataFrame pandas table (starting set)
+        """
+        ctx = context_manager.ContextProvider.get_context()
+        wd = ctx.get_working_dir()
+        exp_id = ctx.get_experiment_id()
+
+        self._db_path = f"{wd}/db.{exp_id}.csv"
+        try:
+            pd.read_csv(self._db_path)
+            return
+        except FileNotFoundError:
+            db = d_0_path
+            db.to_csv(self._db_path, index=False)
+        return
+        
+
 
 class DbProvider(provider.Provider):
     """ Database provider. Implemented as singleton accesible in every part
@@ -200,6 +222,9 @@ class DbProvider(provider.Provider):
         if context_type == "file":
             d_0_path = options.get("d_0_path")
             DbProvider._db = DManagerFile(d_0_path)
+        if context_type == "dataframe":
+            d_0_path = options.get("d_0_path")
+            DbProvider._db = DManagerDataFrame(d_0_path)
         else:
             raise ValueError("Unknown database type")
 
