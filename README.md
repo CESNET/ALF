@@ -7,6 +7,7 @@
 * [Use](#use)
 * [Quick start](#quick-start)
 * [How to create your own application](#how-to-create-your-own-application)
+* [GUI Demo](#GUI)
 * [Further Information](#further-information)
 
 ## About project
@@ -172,6 +173,19 @@ Last part - run the machine:
 ```python
 engine.run()
 ```
+
+## GUI
+
+ALF comes with an easy GUI demo built with `streamlit`.
+
+<p align="center">
+<img src="assets/gui1.png" width="300">
+<img src="assets/gui2.png" width="300">
+</p>
+
+
+Run with `streamlit run alf_gui.py`
+
 
 ## Further Information
 
