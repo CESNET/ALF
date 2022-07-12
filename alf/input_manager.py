@@ -88,3 +88,12 @@ class CSVFolderInputManager(InputManager):
                 continue
             except AttributeError:
                 continue
+
+class DataFramesInMemoryInputManager(InputManager):
+    """Input manager for in-memory CSV. Input is pandas DataFrame.
+    """
+    
+    def get(self) -> ip_flow.IPFlowsDataFrame:
+        for i in self._input_definition:
+            yield i
+
