@@ -57,19 +57,7 @@ class AnotatorDoH(Anotator):
             blacklist_path (str): Path to blacklist file.
         """
         super().__init__()
-        self._blacklist = self._parse_ip_list(blacklist_path)
-
-    def _parse_ip_list(self, filepath: str) -> set[str]:
-        """Parse IP Blacklist from file.
-
-        Args:
-            filepath (str): filepath to blacklist file.
-
-        Returns:
-            set[str]: set of IPs from blacklist file.
-        """
-        with open(filepath, mode='r', encoding='utf8') as file:
-            return set(file.read().splitlines())
+        self._blacklist = _parse_ip_list(blacklist_path)
 
     def anotate(
             self,
@@ -95,3 +83,16 @@ class AnotatorDoH(Anotator):
         on_blacklist = \
             (str(src_ip) in ip_blacklist) or (str(dst_ip) in ip_blacklist)
         return on_blacklist
+
+
+def _parse_ip_list(filepath: str) -> set[str]:
+    """Parse IP Blacklist from file.
+
+    Args:
+        filepath (str): filepath to blacklist file.
+
+    Returns:
+        set[str]: set of IPs from blacklist file.
+    """
+    with open(filepath, mode='r', encoding='utf8') as file:
+        return set(file.read().splitlines())
