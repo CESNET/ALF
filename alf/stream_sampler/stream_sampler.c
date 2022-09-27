@@ -96,10 +96,12 @@ static int stop = 0;
 
 TRAP_DEFAULT_SIGNAL_HANDLER(stop = 1)
 
-int strategy = 0;
-double threshold = 0.0;
+int strategy;
+double threshold ;
 double budget = 0.1;
-double probability  = 0;
+double probability;
+
+int statistics[64] = {0};
 
 /**
  * Return FLOW_ACCEPT if random number is lower than probability, else return FLOW_REJECT
@@ -112,12 +114,14 @@ int strategy_random() {
 
 int strategy_uncertainty_lc(double * proba, int proba_size) {
    double max = proba[0];
-   int i;
+   int i, max_class = 0;
    for(int i = 1; i < proba_size; i++) {
       if (proba[i] > max) {
          max = proba[i];
+         max_class = i;
       }
    }
+   statistics[max_class]++;
    return max < threshold ? FLOW_ACCEPT : FLOW_REJECT;
 }
 
@@ -184,7 +188,7 @@ int main(int argc, char **argv)
    }
 
    /* **** Create UniRec templates **** */
-   ur_template_t *in_tmplt = ur_create_input_template(0, "CLASS,PROBA", NULL);
+   ur_template_t *in_tmplt = ur_create_input_template(0, "PROBA", NULL);
    if (in_tmplt == NULL){
       fprintf(stderr, "Error: Input template could not be created.\n");
       return -1;

@@ -27,6 +27,12 @@ lint:
 	@echo "Linting:"
 	$(LINTER_BIN) --count alf
 
+send:
+	/usr/bin/nemea/traffic_repeater -i "f:example.trapcap,u:alf_predictor_socket"
+
+receive:
+	/usr/bin/nemea/logger -i "u:sink" -t
+
 
 
 
