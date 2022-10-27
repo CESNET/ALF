@@ -1,6 +1,0 @@
-sklearn
-pandas
-numpy
-scipy
-pymysql
-imblearn
