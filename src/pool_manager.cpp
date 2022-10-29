@@ -5,16 +5,29 @@ namespace alf {
 
 	Pool_manager::~Pool_manager() = default;
 
-	arma::mat Pool_manager::load() const {
-			arma::mat pool;
-			mlpack::data::DatasetInfo datasetInfo;
-			mlpack::data::Load(m_path, pool, datasetInfo, true);
-			return pool;
-
+	void Pool_manager::load() {
+		arma::mat matrix;
+		mlpack::data::DatasetInfo datasetInfo;
+		mlpack::data::Load(m_path, matrix, datasetInfo, true);
+		m_matrix = std::make_shared<arma::mat>(matrix);
+		m_datasetInfo = std::make_shared<mlpack::data::DatasetInfo>(datasetInfo);
 	}
 
-	void Pool_manager::removeSample(arma::mat& matrix, const arma::uvec& indices) {
-		matrix.shed_cols(indices);
+	void Pool_manager::removeSample(const arma::uvec& indices) {
+		m_matrix->shed_cols(indices);
 	}
+
+	void Pool_manager::write() {
+		mlpack::data::Save(m_path, *m_matrix);
+	}
+
+	std::shared_ptr<arma::mat> Pool_manager::getMatrix() const {
+		return m_matrix;
+	}
+
+	std::shared_ptr<mlpack::data::DatasetInfo> Pool_manager::getDatasetInfo() const {
+		return m_datasetInfo;
+	}
+
 
 }

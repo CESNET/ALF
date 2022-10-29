@@ -15,7 +15,7 @@ find_package(mlpack REQUIRED)
 
 add_library(${PROJECT_NAME} STATIC
         include/alf/pool_manager.hpp
-        src/pool_manager.cpp)
+        src/pool_manager.cpp include/alf/query.hpp src/query.cpp)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
     OpenMP::OpenMP_CXX

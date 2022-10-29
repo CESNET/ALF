@@ -1,0 +1,5 @@
+if(EXISTS "/home/jrslv/Projects/ALF/cmake-build-debug/test/ALFTest[1]_tests.cmake")
+  include("/home/jrslv/Projects/ALF/cmake-build-debug/test/ALFTest[1]_tests.cmake")
+else()
+  add_test(ALFTest_NOT_BUILT ALFTest_NOT_BUILT)
+endif()
