@@ -23,7 +23,7 @@ namespace alf {
 		void remove_unlabeled(const arma::uvec& indices);
 		std::shared_ptr<arma::mat> get_labeled() const;
 		std::shared_ptr<arma::mat> get_unlabeled() const;
-		std::shared_ptr<arma::vec> get_labels() const;
+		std::shared_ptr<arma::Row<size_t>> get_labels() const;
 		int get_labels_count() const;
     private:
 		void open_db();
@@ -31,7 +31,7 @@ namespace alf {
         std::string m_path;
 		std::shared_ptr<arma::mat> m_labeled;
 		std::shared_ptr<arma::mat> m_unlabeled;
-		std::shared_ptr<arma::vec> m_labels;
+		std::shared_ptr<arma::Row<size_t>> m_labels;
 		std::vector<int> m_unlabeled_index_mapping; // maps index of sample in armadillo matrix to index in database so: vector[i] = index in db
 		sqlite3 * m_db;
 	};

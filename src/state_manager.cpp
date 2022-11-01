@@ -27,7 +27,7 @@ namespace alf {
 			rc = sqlite3_step(stmt);
 		}
 		m_labeled = std::make_shared<arma::mat>(cols - 2, rows);
-		m_labels = std::make_shared<arma::vec>(rows);
+		m_labels = std::make_shared<arma::Row<size_t>>(rows);
 		sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
 		rc = sqlite3_step(stmt);
 		int row = 0;
@@ -144,8 +144,4 @@ namespace alf {
 	int State_manager::get_labels_count() const {
 		return static_cast<int>(m_labels->max() + 1);
 	}
-
-
-
-
 }
