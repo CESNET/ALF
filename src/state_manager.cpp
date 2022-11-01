@@ -89,6 +89,31 @@ namespace alf {
 		close_db();
 	}
 
+	void State_manager::remove_unlabeled(const arma::uvec& indices) {
+		open_db();
+		sqlite3_stmt * stmt;
+		std::string sql = "DELETE FROM unlabeled WHERE id = ?";
+		int rc = sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
+		if (rc != SQLITE_OK) {
+			mlpack::Log::Fatal << "Failed to fetch data: " << sqlite3_errmsg(m_db) << std::endl;
+			close_db();
+			throw std::runtime_error("Failed to fetch data.");
+		}
+		for (int i = 0; i < indices.n_elem; i++) {
+			sqlite3_bind_int(stmt, 1, m_unlabeled_index_mapping[indices[i]]);
+			rc = sqlite3_step(stmt);
+			if (rc != SQLITE_DONE) {
+				mlpack::Log::Fatal << "Failed to delete data: " << sqlite3_errmsg(m_db) << std::endl;
+				close_db();
+				throw std::runtime_error("Failed to delete data.");
+			}
+			sqlite3_reset(stmt);
+		}
+		sqlite3_finalize(stmt);
+		close_db();
+	}
+
+
 	void State_manager::open_db() {
 		auto rc = sqlite3_open(m_path.c_str(), &m_db);
 		if (rc) {
