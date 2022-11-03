@@ -10,9 +10,7 @@ namespace alf {
 			m_rf->Train(*m_state.get_labeled(), *m_state.get_labels(), m_state.get_labels_count());
 		}
 		arma::uvec flow_indices = m_query(m_rf, m_state.get_labeled(), m_state.get_unlabeled());
-		send_to_anotator(m_state.get_unlabeled()->cols(flow_indices));
-		m_state.remove_unlabeled(flow_indices);
+		m_state.annotate_unlabeled(flow_indices);
 		++m_cycle_after_train;
 	}
-
 }

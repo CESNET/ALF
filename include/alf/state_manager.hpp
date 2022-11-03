@@ -20,7 +20,7 @@ namespace alf {
         ~State_manager();
         void load_labeled();
 		void load_unlabeled();
-		void remove_unlabeled(const arma::uvec& indices);
+		void annotate_unlabeled(const arma::uvec& indices);
 		std::shared_ptr<arma::mat> get_labeled() const;
 		std::shared_ptr<arma::mat> get_unlabeled() const;
 		std::shared_ptr<arma::Row<size_t>> get_labels() const;
