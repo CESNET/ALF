@@ -6,19 +6,13 @@
 #include <mlpack.hpp>
 
 #include <alf/state_manager.hpp>
+#include <alf/model.hpp>
 
 using namespace mlpack;
 
 namespace alf {
 
-	enum Phase {
-		COLD,
-		WARM,
-		HOT,
-		FEVER
-	};
-
-	template<class STRATEGY>
+	template<class STRATEGY, class MODEL>
 	class Query {
 	public:
 		/**
@@ -36,7 +30,7 @@ namespace alf {
 		STRATEGY m_query;
 		int m_train_frequency;
 		int m_cycle_after_train;
-		std::shared_ptr<RandomForest<>> m_rf;
+		std::shared_ptr<MODEL> m_model;
 		State_manager m_state;
 	};
 }
