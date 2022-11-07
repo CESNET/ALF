@@ -51,7 +51,7 @@ namespace alf {
 	void State_manager::load_unlabeled() {
 		open_db();
 		sqlite3_stmt * stmt;
-		std::string sql = "SELECT * FROM unlabeled";
+		std::string sql = "SELECT * FROM unlabeled WHERE ANNOTATE = 0";
 		int rc = sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
 		if (rc != SQLITE_OK) {
 			mlpack::Log::Fatal << "Failed to fetch data: " << sqlite3_errmsg(m_db) << std::endl;
@@ -69,7 +69,7 @@ namespace alf {
 			rows++;
 			rc = sqlite3_step(stmt);
 		}
-		m_unlabeled = std::make_shared<arma::mat>(cols - 1, rows);
+		m_unlabeled = std::make_shared<arma::mat>(cols - 2, rows);
 		m_unlabeled_index_mapping = std::vector<int>(rows);
 		sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
 		rc = sqlite3_step(stmt);
@@ -78,8 +78,10 @@ namespace alf {
 			for (int col = 0; col < cols; col++) {
 				if (col == 0) {
 					m_unlabeled_index_mapping[row] = sqlite3_column_int(stmt, col);
-				} else {
-					m_labeled->at(col - 1, row) = sqlite3_column_double(stmt, col);
+				} else if (col == cols - 1) {
+                    continue;
+                } else {
+                    m_unlabeled->at(col - 2, row) = sqlite3_column_double(stmt, col);
 				}
 			}
 			row++;
@@ -93,7 +95,7 @@ namespace alf {
 	void State_manager::annotate_unlabeled(const arma::uvec& indices) {
 		open_db();
 		sqlite3_stmt * stmt;
-		std::string sql = "UPDATE unlabeled SET annotate = 1 WHERE id = ?";
+		std::string sql = "UPDATE unlabeled SET ANNOTATE = 1 WHERE id = ?";
 		int rc = sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
 		if (rc != SQLITE_OK) {
 			mlpack::Log::Fatal << "Failed to update data: " << sqlite3_errmsg(m_db) << std::endl;
@@ -143,4 +145,5 @@ namespace alf {
 	int State_manager::get_labels_count() const {
 		return static_cast<int>(m_labels->max() + 1);
 	}
+
 }

@@ -42,3 +42,5 @@ namespace alf {
 }
 
 #endif // ALF_QUERY_HPP
+
+

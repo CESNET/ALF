@@ -12,13 +12,38 @@ namespace alf {
     public:
         StrategyBase() = default;
         ~StrategyBase() = default;
-        arma::uvec operator()(
+        virtual arma::uvec select(
                 std::shared_ptr<RandomForest<>> rf,
-                std::shared_ptr<arma::mat> &labeled,
-                std::shared_ptr<arma::mat> &unlabeled);
+                std::shared_ptr<arma::mat> labeled,
+                std::shared_ptr<arma::mat> unlabeled) = 0;
     };
 
-    class RandomStrategy: public StrategyBase {};
+    class RandomStrategy: public StrategyBase {
+    public:
+        explicit RandomStrategy(int count = 1): m_count(count) {};
+        arma::uvec select(
+                std::shared_ptr<RandomForest<>> rf,
+                std::shared_ptr<arma::mat> labeled,
+                std::shared_ptr<arma::mat> unlabeled) override;
+    private:
+        int m_count;
+    };
+
+    class UncertaintyLCStrategy: public StrategyBase {
+    public:
+        arma::uvec select(
+                std::shared_ptr<RandomForest<>> rf,
+                std::shared_ptr<arma::mat> labeled,
+                std::shared_ptr<arma::mat> unlabeled) override;
+    };
+
+    class UncertaintyEntropyStrategy: public StrategyBase {
+    public:
+        arma::uvec select(
+                std::shared_ptr<RandomForest<>> rf,
+                std::shared_ptr<arma::mat> labeled,
+                std::shared_ptr<arma::mat> unlabeled) override;
+    };
 
 }
 
