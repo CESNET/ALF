@@ -41,6 +41,8 @@ namespace alf {
     template class RandomStrategy<RandomForestModel>;
     template class UncertaintyLCStrategy<RandomForestModel>;
     template class UncertaintyEntropyStrategy<RandomForestModel>;
-
+    template class RandomStrategy<CommitteeModel>;
+    template class UncertaintyLCStrategy<CommitteeModel>;
+    template class UncertaintyEntropyStrategy<CommitteeModel>;
 }
 

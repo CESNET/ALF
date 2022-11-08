@@ -25,6 +25,7 @@ add_library(${PROJECT_NAME} STATIC
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
         -fopenmp
+        -larmadillo
         -lsqlite3)
 
 target_include_directories(${PROJECT_NAME} PUBLIC

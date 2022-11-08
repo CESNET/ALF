@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
 
 #include <string>
-#include <iostream>
 
 #include <mlpack.hpp>
 
@@ -53,7 +52,7 @@ TEST(BasicStrategies, UncertaintyLCStrategy) {
     auto strategy = UncertaintyLCStrategy<RandomForestModel>();
     auto result = strategy.select(model, labeled, labeled);
     EXPECT_TRUE(result.n_elem == 1);
-    EXPECT_TRUE(result[0] == 2);
+    EXPECT_EQ(result[0], 0);
 }
 
 TEST(BasicStrategies, UncertaintyEntropyStrategy) {
@@ -67,5 +66,5 @@ TEST(BasicStrategies, UncertaintyEntropyStrategy) {
     auto strategy = UncertaintyEntropyStrategy<RandomForestModel>();
     auto result = strategy.select(model, labeled, labeled);
     EXPECT_TRUE(result.n_elem == 1);
-    EXPECT_TRUE(result[0] == 2);
+    EXPECT_EQ(result[0], 0);
 }
