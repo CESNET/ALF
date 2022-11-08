@@ -2,6 +2,7 @@
 
 #include <string>
 #include <iostream>
+#include <mlpack.hpp>
 #include <fstream> // for copying files
 
 #include <alf/state_manager.hpp>

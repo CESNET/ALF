@@ -19,12 +19,11 @@ namespace alf {
 		 * @brief Construct a new Query object
 		 * @param query Query to be executed.
 		 */
-		explicit Query(STRATEGY & query, int train_frequency = 10):
+		explicit Query(std::shared_ptr<MODEL> model, STRATEGY & query, int train_frequency = 10):
 			m_query(query),
 			m_train_frequency(train_frequency),
-			m_cycle_after_train(0) {
-				m_rf = std::make_shared<RandomForest<>>();
-			};
+            m_model(model),
+			m_cycle_after_train(0) {};
 		void execute();
 	private:
 		STRATEGY m_query;

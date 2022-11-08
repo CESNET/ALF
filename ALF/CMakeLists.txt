@@ -13,8 +13,15 @@ include_directories(include/alf)
 add_library(${PROJECT_NAME} STATIC
         include/alf/state_manager.hpp
         src/state_manager.cpp
+
         include/alf/query.hpp
-        src/query.cpp include/alf/strategy.hpp src/strategy.cpp include/alf/model.hpp src/model.cpp)
+        src/query.cpp
+
+        include/alf/strategy.hpp
+        src/strategy.cpp
+
+        include/alf/model.hpp
+        src/model.cpp)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
         -fopenmp

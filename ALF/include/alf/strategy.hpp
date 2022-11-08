@@ -5,6 +5,8 @@
 
 #include <mlpack.hpp>
 
+#include <alf/model.hpp>
+
 using namespace mlpack;
 
 namespace alf {
