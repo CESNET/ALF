@@ -35,7 +35,7 @@ jobs:
       - name: Run tests
         run: |
           cd ${{ github.workspace }}
-          cd build
+          cd build/test
           ctest
           
       
