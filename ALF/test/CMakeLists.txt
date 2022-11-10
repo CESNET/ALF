@@ -9,7 +9,8 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 file(GLOB TEST_SOURCES *.test.cpp)
-add_executable(ALFTest ${TEST_SOURCES})
+add_executable(ALFTest ${TEST_SOURCES} model_wrapper.test.cpp)
+
 target_compile_definitions(
         ALFTest
         PUBLIC
@@ -20,6 +21,7 @@ target_link_libraries(
     PUBLIC ${PROJECT_NAME}
     PUBLIC GTest::gtest_main
 )
+
 include(GoogleTest)
 gtest_discover_tests(ALFTest)
 

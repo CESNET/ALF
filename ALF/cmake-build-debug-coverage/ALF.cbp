@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ALF"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\test\;CMake Files\cmake-build-debug-coverage\;CMake Files\cmake-build-debug-coverage\_deps\;CMake Files\cmake-build-debug-coverage\_deps\googletest-src\;CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googlemock\;CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googlemock\cmake\;CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googletest\;CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googletest\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ALF">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/libALF.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 ALF"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ALF/fast">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/libALF.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 ALF/fast"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ALFTest">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/ALFTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTEST_RESOURCE_DIR=&quot;/Users/jrslv/Projects/ALF/test&quot;"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/Makefile&quot;  VERBOSE=1 ALFTest"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ALFTest/fast">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/ALFTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DTEST_RESOURCE_DIR=&quot;/Users/jrslv/Projects/ALF/test&quot;"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/Makefile&quot;  VERBOSE=1 ALFTest/fast"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock/fast">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_main/fast">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/jrslv/Projects/ALF/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/include/alf"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/include"/>
+					<Add directory="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/aarch64-apple-darwin22"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/../../../../../../include/c++/12/backward"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include"/>
+					<Add directory="/opt/homebrew/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/System/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j8 -f &quot;/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-build/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock/src/gmock-all.cc">
+			<Option target="gmock"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock/src/gmock_main.cc">
+			<Option target="gmock_main"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/include/alf/model.hpp">
+			<Option target="ALF"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/include/alf/query.hpp">
+			<Option target="ALF"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/include/alf/state_manager.hpp">
+			<Option target="ALF"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/include/alf/strategy.hpp">
+			<Option target="ALF"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/src/model.cpp">
+			<Option target="ALF"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/src/query.cpp">
+			<Option target="ALF"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/src/state_manager.cpp">
+			<Option target="ALF"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/src/strategy.cpp">
+			<Option target="ALF"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/test/basic_strategies.test.cpp">
+			<Option target="ALFTest"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/test/model_wrapper.test.cpp">
+			<Option target="ALFTest"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/test/pool_manager.test.cpp">
+			<Option target="ALFTest"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-debug-coverage\_deps\googletest-src\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googlemock\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googletest\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/_deps/googletest-src/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug-coverage\_deps\googletest-src\googletest\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

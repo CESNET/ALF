@@ -1,0 +1,77 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"implicit" : {},
+				"path" : "gcc"
+			},
+			"language" : "C"
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/opt/homebrew/include",
+						"/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12",
+						"/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/aarch64-apple-darwin22",
+						"/opt/homebrew/Cellar/gcc/12.2.0/include/c++/12/backward",
+						"/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12/include",
+						"/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12/include-fixed",
+						"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/include",
+						"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks"
+					],
+					"linkDirectories" : 
+					[
+						"/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc/aarch64-apple-darwin22/12",
+						"/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current/gcc",
+						"/opt/homebrew/lib",
+						"/opt/homebrew/Cellar/gcc/12.2.0/lib/gcc/current",
+						"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/usr/lib"
+					],
+					"linkFrameworkDirectories" : 
+					[
+						"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.0.sdk/System/Library/Frameworks"
+					],
+					"linkLibraries" : 
+					[
+						"stdc++",
+						"gcov",
+						"emutls_w",
+						"gcc",
+						"gcc"
+					]
+				},
+				"path" : "/opt/homebrew/bin/g++",
+				"version" : "12.2.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"m",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
