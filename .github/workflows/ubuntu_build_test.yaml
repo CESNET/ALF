@@ -19,7 +19,7 @@ jobs:
           mkdir build
           cd build
           cmake -DDEBUG=OFF -DDOWNLOAD_DEPENDENCIES=ON -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_R_BINDINGS=OFF -DBUILD_JULIA_BINDINGS=OFF -DBUILD_GO_BINDINGS=OFF -DBUILD_CLI_EXECUTABLES=OFF -DBUILD_TESTS=OFF ../
-          make install
+          sudo make install
       - name: Build ALF
         run: |
           cmake --build build --target ALFTest
