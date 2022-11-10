@@ -14,8 +14,6 @@ namespace alf {
 
     class RandomForestModel: public IModel {
     public:
-        RandomForestModel() = default;
-        ~RandomForestModel() = default;
         void Train(arma::mat & labeled, arma::Row<size_t> & labels, size_t labels_count) override;
         void Predict(arma::mat & unlabeled, arma::cube &probabilities) override;
         int PredictorCount() override { return 1; }
@@ -25,8 +23,6 @@ namespace alf {
 
     class CommitteeModel: public IModel {
     public:
-        CommitteeModel() = default;
-        ~CommitteeModel() = default;
         void Train(arma::mat & labeled, arma::Row<size_t> & labels, size_t labels_count) override;
         void Predict(arma::mat & unlabeled, arma::cube &probabilities) override;
         int PredictorCount() override { return 3; }

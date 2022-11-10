@@ -221,7 +221,7 @@ _deps
 .idea/
 
 cmake-build-debug
-cmake-build-coverage
+cmake-build-debug-coverage
 cmake-build-release
 
 .DS_Store

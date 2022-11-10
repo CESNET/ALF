@@ -7,32 +7,31 @@ namespace alf {
 
 	void State_manager::load_labeled() {
 		open_db();
-		sqlite3_stmt * stmt;
+		sqlite3_stmt * stmt = nullptr;
 		std::string sql = "SELECT * FROM labeled";
-		int rc = sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
-		if (rc != SQLITE_OK) {
+		int db_return_code = sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
+		if (db_return_code != SQLITE_OK) {
 			mlpack::Log::Fatal << "Failed to fetch data: " << sqlite3_errmsg(m_db) << std::endl;
 			close_db();
 			throw std::runtime_error("Failed to fetch data.");
 		}
-		rc = sqlite3_step(stmt);
-		if (rc != SQLITE_ROW) {
+		db_return_code = sqlite3_step(stmt);
+		if (db_return_code != SQLITE_ROW) {
 			close_db();
 			throw std::runtime_error("No labeled data in database.");
 		}
 		int cols = sqlite3_column_count(stmt);
 		int rows = 0;
-		while (rc == SQLITE_ROW) {
+		while (db_return_code == SQLITE_ROW) {
 			rows++;
-			rc = sqlite3_step(stmt);
+			db_return_code = sqlite3_step(stmt);
 		}
         sqlite3_finalize(stmt);
         m_labeled = std::make_shared<arma::mat>(cols - 2, rows);
 		m_labels = std::make_shared<arma::Row<size_t>>(rows);
 		sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
-		rc = sqlite3_step(stmt);
-		int row = 0;
-		while (rc == SQLITE_ROW) {
+		sqlite3_step(stmt);
+		for (int row = 0; row < rows; ++row) {
 			for (int col = 1; col < cols; col++) {
                 if (col == cols - 1) {
 					m_labels->at(row) = sqlite3_column_int(stmt, col);
@@ -41,7 +40,7 @@ namespace alf {
 				}
 			}
 			row++;
-			rc = sqlite3_step(stmt);
+			sqlite3_step(stmt);
 		}
 		sqlite3_finalize(stmt);
 		close_db();
@@ -49,24 +48,25 @@ namespace alf {
 
 	void State_manager::load_unlabeled() {
 		open_db();
-		sqlite3_stmt * stmt;
+		sqlite3_stmt * stmt = nullptr;
 		std::string sql = "SELECT * FROM unlabeled WHERE ANNOTATE = 0";
-		int rc = sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
-		if (rc != SQLITE_OK) {
+		int db_return_code = sqlite3_prepare_v2(m_db, sql.c_str(), -1, &stmt, nullptr);
+		if (db_return_code != SQLITE_OK) {
 			mlpack::Log::Fatal << "Failed to fetch data: " << sqlite3_errmsg(m_db) << std::endl;
 			close_db();
 			throw std::runtime_error("Failed to fetch data.");
 		}
-		rc = sqlite3_step(stmt);
-		if (rc != SQLITE_ROW) {
+		db_return_code = sqlite3_step(stmt);
+		if (db_return_code != SQLITE_ROW) {
 			close_db();
 			throw std::runtime_error("No labeled data in database.");
 		}
 		int cols = sqlite3_column_count(stmt);
 		int rows = 0;
-		while (rc == SQLITE_ROW) {
+		#pragma unroll
+		while (db_return_code == SQLITE_ROW) {
 			rows++;
-			rc = sqlite3_step(stmt);
+			db_return_code = sqlite3_step(stmt);
 		}
         sqlite3_finalize(stmt);
 
