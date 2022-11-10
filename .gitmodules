@@ -1,0 +1,3 @@
+[submodule "external/mlpack"]
+	path = external/mlpack
+	url = https://github.com/mlpack/mlpack
