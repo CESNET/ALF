@@ -9,6 +9,7 @@
 
 using namespace alf;
 
+/*
 TEST(ModelWrapperTest, RandomForrestTest) {
     std::string path = TEST_RESOURCE_DIR "/test.db";
     auto poolHandler = State_manager(path);
@@ -44,3 +45,4 @@ TEST(ModelWrapperTest, CommitteeModelTest) {
     EXPECT_EQ(probabilities.n_cols, unlabeled->n_cols);
     EXPECT_EQ(probabilities.n_slices, model.PredictorCount());
 }
+*/
