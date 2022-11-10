@@ -7,22 +7,25 @@ project(
 
 set(CMAKE_CXX_STANDARD 14)
 
-
-find_package(OpenMP REQUIRED)
-find_package(mlpack REQUIRED)
-
 include_directories(include)
 include_directories(include/alf)
 
 add_library(${PROJECT_NAME} STATIC
         include/alf/state_manager.hpp
         src/state_manager.cpp
+
         include/alf/query.hpp
-        src/query.cpp)
+        src/query.cpp
+
+        include/alf/strategy.hpp
+        src/strategy.cpp
+
+        include/alf/model.hpp
+        src/model.cpp)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
-        OpenMP::OpenMP_CXX
-        mlpack::mlpack
+        -fopenmp
+        -larmadillo
         -lsqlite3)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
