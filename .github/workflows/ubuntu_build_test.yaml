@@ -22,9 +22,10 @@ jobs:
           sudo make install
       - name: Build ALF
         run: |
+          cd ${{ github.workspace }}
           mkdir build
           cd build
-          cmake --target ALFTest ../
+          cmake .. --target ALFTest
       - name: Run tests
         run: |
           cd build
