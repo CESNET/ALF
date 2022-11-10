@@ -25,7 +25,7 @@ jobs:
           cd ${{ github.workspace }}
           mkdir build
           cd build
-          cmake .. --target ALFTest
+          cmake ..
       - name: Run tests
         run: |
           cd build
