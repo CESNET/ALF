@@ -12,13 +12,16 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
-      # install dependency mlpack
-      - name: Install mlpack
+      - name: Install cereal
+        run: sudo apt-get install libcereal-dev
+      - name: Install armadillo
+        run: sudo apt-get install libarmadillo-dev
+      - name: Install mlpack # replace submodule with apt-get when mlpack 4.0.0 is released as apt package
         run: |
           cd external/mlpack
           mkdir build
           cd build
-          cmake -DDEBUG=OFF -DDOWNLOAD_DEPENDENCIES=ON -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_R_BINDINGS=OFF -DBUILD_JULIA_BINDINGS=OFF -DBUILD_GO_BINDINGS=OFF -DBUILD_CLI_EXECUTABLES=OFF -DBUILD_TESTS=OFF ../
+          cmake -DDEBUG=OFF -DDOWNLOAD_DEPENDENCIES=OFF -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_R_BINDINGS=OFF -DBUILD_JULIA_BINDINGS=OFF -DBUILD_GO_BINDINGS=OFF -DBUILD_CLI_EXECUTABLES=OFF -DBUILD_TESTS=OFF ../
           sudo make install
       - name: Build ALF
         run: |
