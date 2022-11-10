@@ -22,7 +22,9 @@ jobs:
           sudo make install
       - name: Build ALF
         run: |
-          cmake --build build --target ALFTest
+          mkdir build
+          cd build
+          cmake --target ALFTest ../
       - name: Run tests
         run: |
           cd build
