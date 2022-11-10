@@ -1,5 +1,0 @@
-if(EXISTS "/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/ALFTest[1]_tests.cmake")
-  include("/Users/jrslv/Projects/ALF/cmake-build-debug-coverage/test/ALFTest[1]_tests.cmake")
-else()
-  add_test(ALFTest_NOT_BUILT ALFTest_NOT_BUILT)
-endif()
