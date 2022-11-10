@@ -16,6 +16,8 @@ jobs:
         run: sudo apt-get install libcereal-dev
       - name: Install armadillo
         run: sudo apt-get install libarmadillo-dev
+      - name: Install ensmallen
+        run: sudo apt-get install libensmallen-dev
       - name: Install mlpack # replace submodule with apt-get when mlpack 4.0.0 is released as apt package
         run: |
           cd external/mlpack
