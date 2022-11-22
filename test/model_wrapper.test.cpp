@@ -9,7 +9,7 @@
 
 using namespace alf;
 
-/*
+/* TODO: why segfaulting on github?
 TEST(ModelWrapperTest, RandomForrestTest) {
     std::string path = TEST_RESOURCE_DIR "/test.db";
     auto poolHandler = State_manager(path);

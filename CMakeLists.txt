@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.16)
 project(
         ALF
         VERSION 1.0
@@ -21,7 +21,7 @@ add_library(${PROJECT_NAME} STATIC
         src/strategy.cpp
 
         include/alf/model.hpp
-        src/model.cpp)
+        src/model.cpp include/alf/util.hpp src/annotator_runner.cpp include/annotator/annotator_runner.hpp include/sampler/sampler.hpp)
 
 target_link_libraries(${PROJECT_NAME} PUBLIC
         -fopenmp

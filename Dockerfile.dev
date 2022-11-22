@@ -1,0 +1,16 @@
+FROM --platform=linux/amd64 ubuntu:20.04
+
+ENV HOME /root
+
+SHELL ["/bin/bash", "-c"]
+
+RUN DEBIAN_FRONTEND="noninteractive" apt-get update && apt-get -y install tzdata
+RUN DEBIAN_FRONTEND="noninteractive" apt-get update && apt-get -y install \
+    gcc g++ cmake gdb libarmadillo-dev libensmallen-dev \
+    libcereal-dev git libstb-dev sqlite3 libsqlite3-dev \
+    valgrind
+
+ADD external /external
+RUN cd external/mlpack && mkdir build && cd build && cmake -DDEBUG=ON -DDOWNLOAD_DEPENDENCIES=OFF -DBUILD_PYTHON_BINDINGS=OFF -DBUILD_R_BINDINGS=OFF -DBUILD_JULIA_BINDINGS=OFF -DBUILD_GO_BINDINGS=OFF -DBUILD_CLI_EXECUTABLES=OFF -DBUILD_TESTS=OFF .. && make -j4 && make install
+
+

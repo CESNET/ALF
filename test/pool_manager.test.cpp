@@ -34,7 +34,7 @@ TEST(PoolHandleTest, LoadingLabeledDataset) {
 TEST(PoolHandleTest, LoadingDbManyTimesInOneObject) {
     std::string path = TEST_RESOURCE_DIR "/test.db";
     auto poolHandler = State_manager(path);
-    for (int i = 0; i < 1000; ++i){
+    for (int i = 0; i < 5; ++i){
         poolHandler.load_unlabeled();
     }
 }
@@ -89,7 +89,7 @@ TEST(PoolHandleTest, AnnotateUnlabeledManyInLoop) {
     EXPECT_EQ(unlabeled->n_rows, 20);
     EXPECT_EQ(unlabeled->n_cols, 2000);
 
-    for( int i = 0 ; i < 250; ++i){
+    for( int i = 0 ; i < 5; ++i){
         poolHandler.load_unlabeled();
         arma::uvec indices(2);
         indices[0] = 0;
@@ -100,7 +100,7 @@ TEST(PoolHandleTest, AnnotateUnlabeledManyInLoop) {
     unlabeled = poolHandler.get_unlabeled();
     EXPECT_TRUE(unlabeled != nullptr);
     EXPECT_EQ(unlabeled->n_rows, 20);
-    EXPECT_EQ(unlabeled->n_cols, 1500);
+    EXPECT_EQ(unlabeled->n_cols, 1990);
     // delete temporary file
     remove(tmpPath.c_str());
 }

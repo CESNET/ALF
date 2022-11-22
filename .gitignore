@@ -219,9 +219,6 @@ _deps
 # End of https://www.toptal.com/developers/gitignore/api/cmake
 
 .idea/
-
-cmake-build-debug
-cmake-build-debug-coverage
-cmake-build-release
+cmake-*
 
 .DS_Store
