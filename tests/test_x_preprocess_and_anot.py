@@ -31,7 +31,7 @@ def test_anotation():
     anot = anotator.AnotatorDoH("tests/test_files/test_blacklist.txt")
     for flows in trapcap_folder_input_manager.get():
         assert flows is not None
-        assert flows.shape[0] == 2076
+        assert flows.shape[0] == 7291
         assert flows.shape[1] == 34
 
         result = anot.anotate(flows)
@@ -51,13 +51,13 @@ def test_preprocess():
     anot = anotator.AnotatorDoH("tests/test_files/test_blacklist.txt")
     for flows in trapcap_folder_input_manager.get():
         assert flows is not None
-        assert flows.shape[0] == 2076
+        assert flows.shape[0] == 7291
         assert flows.shape[1] == 34
         preprocessed = preprocess.PreprocessorDoH().preprocess(flows)
         assert preprocessed.shape[1] == 60
         result = anot.anotate(preprocessed)
         assert result.shape[1] == preprocessed.shape[1] + 1
-        assert result.shape == (921, 61)
+        assert result.shape == (3341, 61)
 
         break
 

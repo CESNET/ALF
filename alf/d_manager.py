@@ -222,7 +222,7 @@ class DbProvider(provider.Provider):
         if context_type == "file":
             d_0_path = options.get("d_0_path")
             DbProvider._db = DManagerFile(d_0_path)
-        if context_type == "dataframe":
+        elif context_type == "dataframe":
             d_0_path = options.get("d_0_path")
             DbProvider._db = DManagerDataFrame(d_0_path)
         else:
